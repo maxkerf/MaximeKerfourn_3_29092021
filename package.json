@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"sass": "sass --watch ./sass/main.scss ./public/css/style.css --style compressed --no-source-map",
-		"prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css"
+		"sass": "sass -w ./sass/main.scss ./public/css/unprefixed/style.css -s compressed --no-source-map",
+		"prefix": "postcss -w ./public/css/unprefixed/style.css -o ./public/css/style.css -u autoprefixer --no-map"
 	},
 	"repository": "https://github.com/maxkerf/MaximeKerfourn_3_29092021.git",
 	"author": "Maxime Kerfourn",
