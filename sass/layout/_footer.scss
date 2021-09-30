@@ -1,0 +1,39 @@
+.footer {
+	background-color: #353535;
+	color: #fff;
+	padding: 1.5rem 2rem 2rem 2rem;
+
+	&__heading {
+		font-family: "Shrikhand", cursive;
+		font-weight: 400;
+		font-size: 1.25rem;
+	}
+
+	& ul {
+		margin-top: 1rem;
+		padding: 0;
+	}
+
+	&__link {
+		list-style: none;
+
+		&:not(:first-of-type) {
+			margin-top: 0.5rem;
+		}
+
+		& a {
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				color: $color-tertiary;
+				cursor: pointer;
+			}
+		}
+
+		& i {
+			font-size: 0.875rem;
+			width: 1.75rem;
+		}
+	}
+}
