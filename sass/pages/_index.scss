@@ -1,3 +1,60 @@
+/* Banner */
+
+.banner {
+	padding: $padding-container;
+	padding-top: 5rem;
+	background-color: $color-grey-light;
+	text-align: center;
+	position: relative;
+
+	&__text {
+		margin-top: 0.5rem;
+		font-weight: 300;
+	}
+}
+
+.form {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: darken($color-grey-light, 5%);
+	width: 100%;
+	padding: 0.875rem 0;
+	color: $color-grey-darker;
+
+	&__input {
+		margin-left: 1rem;
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: inherit;
+		width: 8rem;
+	}
+}
+
+.btn-explore {
+	margin-top: 2rem;
+	background: linear-gradient($color-secondary, $color-primary);
+	color: $color-white;
+	padding: 0.875rem 1.25rem;
+	border-radius: 3rem;
+	box-shadow: 0 5px 10px 0 rgba($color-black, 0.3);
+	font-size: 0.875rem;
+	transition: transform 330ms;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+/* Guide */
+
+.guide {
+	padding: $padding-container;
+}
+
 .guide-step {
 	display: flex;
 	align-items: center;
@@ -5,7 +62,7 @@
 	border-radius: 1.25rem;
 	height: 4.5rem;
 	box-shadow: 0 5px 10px 0 rgba($color-black, 0.15);
-	margin-left: $step-number-size/2;
+	margin-left: $size-step-number/2;
 	margin-top: 1rem;
 	position: relative;
 	z-index: 1;
@@ -39,14 +96,14 @@
 		color: $color-white;
 		font-size: 0.875rem;
 		border-radius: 50%;
-		width: $step-number-size;
-		height: $step-number-size;
+		width: $size-step-number;
+		height: $size-step-number;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		padding-top: 0.125rem;
 		position: absolute;
-		left: -$step-number-size/2;
+		left: -$size-step-number/2;
 	}
 
 	&__icon {
@@ -55,6 +112,13 @@
 		color: $color-grey-dark;
 		font-size: 1.125rem;
 	}
+}
+
+/* Main */
+
+.main {
+	padding: $padding-container;
+	background-color: $color-grey-light;
 }
 
 .restau-grid {
@@ -119,10 +183,6 @@
 	position: absolute;
 	top: 0;
 	right: 0.5rem;
-	padding: 0;
-	background-color: unset;
-	border: unset;
-	cursor: pointer;
 
 	&:hover {
 		& > .btn-like__content {

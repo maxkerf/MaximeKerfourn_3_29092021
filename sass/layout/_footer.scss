@@ -1,10 +1,8 @@
 .footer {
-	background-color: $color-bg-footer;
+	background-color: $color-grey-darker;
 	color: $color-white;
-
-	& .container {
-		padding-top: 1rem;
-	}
+	padding: $padding-container;
+	padding-top: 1rem;
 
 	&__heading {
 		font-family: "Shrikhand", cursive;
