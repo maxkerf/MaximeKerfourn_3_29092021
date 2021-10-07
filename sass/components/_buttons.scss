@@ -44,11 +44,10 @@
 }
 
 .btn-like {
-	@include btn;
+	cursor: pointer;
 	width: 1.5rem;
 	height: 1.5rem;
 	position: absolute;
-	z-index: 1;
 
 	&--preview {
 		top: 0;
