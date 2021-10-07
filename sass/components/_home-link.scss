@@ -1,0 +1,13 @@
+.home-link {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(100%, -50%);
+	font-size: 1.25rem;
+	text-decoration: none;
+	color: unset;
+
+	&:hover {
+		color: $color-tertiary;
+	}
+}

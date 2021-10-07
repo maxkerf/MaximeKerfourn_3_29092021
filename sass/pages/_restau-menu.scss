@@ -1,0 +1,137 @@
+.menu {
+	position: relative;
+	padding-top: 10rem;
+
+	&__image {
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 12.5rem;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: 50% 75%;
+		}
+	}
+
+	&__body {
+		padding: $padding-container;
+		padding-bottom: 4rem;
+		background-color: $color-grey-light;
+		border-top-left-radius: 2.5rem;
+		border-top-right-radius: 2.5rem;
+		position: relative;
+	}
+
+	&__heading {
+		font-family: "Shrikhand", cursive;
+		font-size: 1.75rem;
+	}
+}
+
+.starters {
+	margin-top: 1.5rem;
+
+	&__heading {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1rem;
+
+		& span {
+			border-bottom: 3px solid $color-tertiary;
+			padding-bottom: 0.25rem;
+		}
+	}
+
+	&__choice {
+		margin-top: 1rem;
+		background-color: $color-white;
+		border-radius: 0.75rem;
+		box-shadow: 0 5px 10px 0 rgba($color-black, 0.2);
+		position: relative;
+		overflow: hidden;
+
+		input {
+			display: none;
+		}
+
+		label {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: inherit;
+			cursor: pointer;
+			z-index: 1;
+
+			&:hover {
+				& + .choice-content {
+					& > .choice-check {
+						transform: translate(0);
+
+						& > i {
+							transform: rotate(1turn);
+						}
+					}
+
+					& > .choice-body {
+						width: calc(100% - 3rem);
+					}
+				}
+			}
+		}
+
+		.choice-content {
+			position: relative;
+		}
+
+		.choice-body {
+			position: relative;
+			padding: 0.5rem;
+			padding-right: 3rem;
+			width: 100%;
+			transition: all 500ms;
+		}
+
+		p {
+			margin-top: 0.25rem;
+			font-size: 0.875rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		span {
+			position: absolute;
+			bottom: 0.5rem;
+			right: 1rem;
+			font-weight: 700;
+			font-size: 0.875rem;
+		}
+
+		.choice-check {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			right: 0;
+			background-color: $color-tertiary;
+			color: $color-white;
+			font-size: 1.25rem;
+			font-weight: 700;
+			width: 3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: translate(100%);
+			transition: transform 500ms;
+
+			& > i {
+				transition: transform 500ms 150ms;
+			}
+		}
+	}
+}

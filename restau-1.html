@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ohmyfood - A la française</title>
+		<link rel="stylesheet" href="./public/css/style.css" />
+		<link rel="stylesheet" href="./public/css/all.css" />
+		<link rel="icon" href="./public/images/logo/ohmyfood@2x.svg" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<a class="home-link" href="/"><i class="fas fa-arrow-left"></i></a>
+			<img
+				class="header__logo"
+				src="./public/images/logo/ohmyfood.png"
+				alt="Logo"
+			/>
+		</header>
+		<!-- Main -->
+		<main class="menu">
+			<div class="menu__image">
+				<img
+					src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+					alt="A la française"
+				/>
+			</div>
+			<div class="menu__body">
+				<h1 class="menu__heading">A la française</h1>
+				<button class="btn-like btn-like--menu">
+					<div class="btn-like__content">
+						<i class="fas fa-heart"></i>
+					</div>
+					<div class="btn-like__content btn-like__content--active">
+						<i class="fas fa-heart"></i>
+					</div>
+				</button>
+				<form id="menu-form" action="">
+					<section class="starters">
+						<h2 class="starters__heading"><span>Entr</span>ées</h2>
+						<div class="starters__choice">
+							<input type="radio" id="1" name="starter" value="1" />
+							<label for="1"></label>
+							<div class="choice-content">
+								<div class="choice-body">
+									<h3>Oeuf au plat</h3>
+									<p>Assaisoné à la truffe sur lit de caviar</p>
+									<span>20€</span>
+								</div>
+								<div class="choice-check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
+						</div>
+						<div>
+							<input type="radio" id="2" name="starter" value="2" />
+							<label for="2">2</label>
+						</div>
+						<div>
+							<input type="radio" id="3" name="starter" value="3" />
+							<label for="3">3</label>
+						</div>
+					</section>
+				</form>
+				<button class="btn btn--menu" form="menu-form">Commander</button>
+			</div>
+		</main>
+		<!-- Footer -->
+		<footer class="footer">
+			<h3 class="footer__heading">ohmyfood</h3>
+			<ul>
+				<li class="footer__link">
+					<i class="fas fa-utensils"></i><a>Proposer un restaurant</a>
+				</li>
+				<li class="footer__link">
+					<i class="fas fa-hands-helping"></i><a>Devenir partenaire</a>
+				</li>
+				<li class="footer__link"><a>Mentions légales</a></li>
+				<li class="footer__link">
+					<a href="mailto:contact@ohmyfood.com">Contact</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

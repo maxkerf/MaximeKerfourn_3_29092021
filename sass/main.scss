@@ -1,11 +1,14 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/home-link";
 
 @import "./layout/header";
 @import "./layout/footer";
 
-@import "./pages/index";
+@import "./pages/home";
+@import "./pages/restau-menu";

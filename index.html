@@ -20,7 +20,7 @@
 		</header>
 		<!-- Banner -->
 		<section class="banner">
-			<form class="form" action="">
+			<form id="form" class="form" action="./#restaurants">
 				<i class="fas fa-map-marker-alt"></i>
 				<input class="form__input" type="text" value="Paris, Belleville" />
 			</form>
@@ -28,7 +28,7 @@
 			<p class="banner__text">
 				Découvrez des restaurants d'exception, séléctionnés par nos soins.
 			</p>
-			<button class="btn btn-explore" onclick="location.href='./#main'">
+			<button class="btn" type="submit" form="form">
 				Explorer nos restaurants
 			</button>
 		</section>
@@ -52,7 +52,7 @@
 			</div>
 		</section>
 		<!-- Main -->
-		<main id="main" class="main">
+		<main id="restaurants" class="restaurants">
 			<h2>Restaurants</h2>
 			<div class="restau-grid">
 				<article class="restau-preview">
@@ -66,7 +66,7 @@
 					<div class="restau-preview__body">
 						<h3>La palette du goût</h3>
 						<p>Ménilmontant</p>
-						<button class="btn btn-like">
+						<button class="btn-like btn-like--preview">
 							<div class="btn-like__content">
 								<i class="fas fa-heart"></i>
 							</div>
@@ -87,7 +87,7 @@
 					<div class="restau-preview__body">
 						<h3>La note enchantée</h3>
 						<p>Charonne</p>
-						<button class="btn btn-like">
+						<button class="btn-like btn-like--preview">
 							<div class="btn-like__content">
 								<i class="fas fa-heart"></i>
 							</div>
@@ -97,7 +97,10 @@
 						</button>
 					</div>
 				</article>
-				<article class="restau-preview">
+				<article
+					class="restau-preview"
+					onclick="location.href='./restau-1.html'"
+				>
 					<label class="label-new">Nouveau</label>
 					<div class="restau-preview__image">
 						<img
@@ -108,7 +111,7 @@
 					<div class="restau-preview__body">
 						<h3>A la française</h3>
 						<p>Cité Rouge</p>
-						<button class="btn btn-like">
+						<button class="btn-like btn-like--preview">
 							<div class="btn-like__content">
 								<i class="fas fa-heart"></i>
 							</div>
@@ -129,7 +132,7 @@
 					<div class="restau-preview__body">
 						<h3>Le délice des sens</h3>
 						<p>Folie-Méricourt</p>
-						<button class="btn btn-like">
+						<button class="btn-like btn-like--preview">
 							<div class="btn-like__content">
 								<i class="fas fa-heart"></i>
 							</div>
