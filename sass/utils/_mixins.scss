@@ -4,3 +4,10 @@
 	border: unset;
 	cursor: pointer;
 }
+
+@mixin disc($size, $color-bg) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	background-color: $color-bg;
+}

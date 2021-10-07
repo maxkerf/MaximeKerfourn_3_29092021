@@ -1,3 +1,43 @@
+/* Loader */
+
+body {
+	animation: loading-body 0ms 3000ms backwards;
+}
+
+.loader-container {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: loader-container 150ms 3000ms forwards;
+}
+
+.loader {
+	@include disc($size-loader, transparent);
+	display: flex;
+	justify-content: center;
+	animation: loader $anim-dur 2 alternate-reverse;
+
+	&__ball {
+		@include disc($size-loader-ball, $color-primary);
+		position: absolute;
+		transform-origin: 50% $size-loader/2;
+		animation: loader-balls $anim-dur 2 alternate;
+
+		@for $i from 1 through $nb-balls {
+			&--#{$i} {
+				transform: rotate(360deg / $nb-balls * ($i - 1));
+			}
+		}
+	}
+}
+
+.page-container {
+	animation: loading-page 400ms 3000ms backwards;
+}
+
 /* Banner */
 
 .banner {
@@ -108,83 +148,12 @@
 	position: relative;
 }
 
-$size-loader: 50vmin;
-$size-ball: 20%;
-$nb-balls: 8;
-$anim-dur: 1250ms;
-
-@mixin disc($size, $color-bg) {
-	width: $size;
-	height: $size;
-	border-radius: 50%;
-	background-color: $color-bg;
-}
-
-.loader-container {
-	position: absolute;
-	margin-top: 1rem;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	animation: loader-container 0ms 3000ms forwards;
-}
-
-@keyframes loader-container {
-	100% {
-		transform: translate(100%);
-	}
-}
-
-.loader {
-	@include disc($size-loader, transparent);
-	display: flex;
-	justify-content: center;
-	animation: loader $anim-dur 3 alternate-reverse;
-
-	&__ball {
-		@include disc($size-ball, $color-primary);
-		position: absolute;
-		transform-origin: 50% $size-loader/2;
-		animation: loader-balls $anim-dur 3 alternate;
-
-		@for $i from 1 through $nb-balls {
-			&--#{$i} {
-				transform: rotate(360deg / $nb-balls * ($i - 1));
-			}
-		}
-	}
-}
-
-@keyframes loader {
-	100% {
-		transform: rotate(1turn);
-	}
-}
-
-@keyframes loader-balls {
-	100% {
-		transform: rotate(1turn);
-	}
-}
-
 .restau-grid {
 	margin-top: 1rem;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1rem;
-	animation: loading 0ms 3000ms backwards;
-}
-
-@keyframes loading {
-	from {
-		transform: translate(calc(100% + 2rem));
-	}
-	to {
-		transform: translate(0);
-	}
 }
 
 .restau-preview {
