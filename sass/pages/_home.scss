@@ -104,6 +104,21 @@
 .restaurants {
 	padding: $padding-container;
 	background-color: $color-grey-light;
+	overflow: hidden;
+	position: relative;
+}
+
+.loader {
+	margin-top: 1rem;
+	position: absolute;
+	width: 100%;
+	animation: loader 0ms 3000ms forwards;
+}
+
+@keyframes loader {
+	100% {
+		transform: translate(150%);
+	}
 }
 
 .restau-grid {
@@ -112,6 +127,16 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1rem;
+	animation: loading 0ms 3000ms backwards;
+}
+
+@keyframes loading {
+	from {
+		transform: translate(150%);
+	}
+	to {
+		transform: translate(0);
+	}
 }
 
 .restau-preview {
@@ -122,11 +147,9 @@
 	width: 100%;
 	max-width: 18rem;
 	box-shadow: 0 5px 12px -5px rgba($color-black, 0.2);
-	transition: transform 330ms;
 
 	&:hover {
 		cursor: pointer;
-		transform: translateY(-2%);
 	}
 
 	&__image {
