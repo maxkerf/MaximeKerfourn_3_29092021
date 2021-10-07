@@ -20,8 +20,8 @@
 			/>
 		</header>
 		<!-- Main -->
-		<main class="menu">
-			<h1 class="menu__heading">A la française</h1>
+		<main class="restau">
+			<h1 class="restau__name">A la française</h1>
 			<div class="btn-like btn-like--menu">
 				<div class="btn-like__content">
 					<i class="fas fa-heart"></i>
@@ -30,26 +30,74 @@
 					<i class="fas fa-heart"></i>
 				</div>
 			</div>
-			<form id="menu-form">
-				<section class="starters">
-					<h2 class="starters__heading"><span>Entr</span>ées</h2>
-					<div class="starters__choice">
-						<input type="radio" id="1" name="starter" value="1" />
-						<label for="1"></label>
-						<div class="choice-content">
-							<div class="choice-body">
-								<h3>Oeuf au plat</h3>
-								<p>Assaisoné à la truffe sur lit de caviar</p>
-								<span>20€</span>
-							</div>
-							<div class="choice-check">
-								<i class="fas fa-check-circle"></i>
-							</div>
+			<form id="menu" class="menu">
+				<section class="menu-category">
+					<h2 class="menu-category__heading"><span>Entr</span>ées</h2>
+					<div class="menu-category__choices-list">
+						<div class="menu-choice">
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="starter-1"
+								name="starter"
+								value="1"
+								required
+							/>
+							<label class="menu-choice__content" for="starter-1">
+								<h3 class="menu-choice__heading">Oeuf au plat</h3>
+								<p class="menu-choice__description">
+									Assaisoné à la truffe sur lit de caviar
+								</p>
+								<span class="menu-choice__price">20€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</label>
+						</div>
+						<div class="menu-choice">
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="starter-2"
+								name="starter"
+								value="2"
+								required
+							/>
+							<label class="menu-choice__content" for="starter-2">
+								<h3 class="menu-choice__heading">Oeuf au plat</h3>
+								<p class="menu-choice__description">
+									Assaisoné à la truffe sur lit de caviar
+								</p>
+								<span class="menu-choice__price">20€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</label>
+						</div>
+						<div class="menu-choice">
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="starter-3"
+								name="starter"
+								value="3"
+								required
+							/>
+							<label class="menu-choice__content" for="starter-3">
+								<h3 class="menu-choice__heading">Oeuf au plat</h3>
+								<p class="menu-choice__description">
+									Assaisoné à la truffe sur lit de caviar
+								</p>
+								<span class="menu-choice__price">20€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</label>
 						</div>
 					</div>
 				</section>
 			</form>
-			<button class="btn btn--menu" form="menu-form">Commander</button>
+			<button class="btn btn--menu" form="menu">Commander</button>
 		</main>
 		<!-- Footer -->
 		<footer class="footer">
