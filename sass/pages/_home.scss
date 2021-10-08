@@ -1,7 +1,7 @@
 /* Loader */
 
 body {
-	animation: loading-body 0ms 3000ms backwards;
+	animation: loading-body 0ms $anim-delay-loader backwards;
 }
 
 .loader-container {
@@ -11,7 +11,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: loader-container 150ms 3000ms forwards;
+	animation: loader-container 150ms $anim-delay-loader forwards;
+}
+
+.page-container {
+	animation: loading-page 400ms $anim-delay-loader backwards;
 }
 
 .loader {
@@ -32,10 +36,6 @@ body {
 			}
 		}
 	}
-}
-
-.page-container {
-	animation: loading-page 400ms 3000ms backwards;
 }
 
 /* Banner */
@@ -92,7 +92,7 @@ body {
 	position: relative;
 	z-index: 1;
 
-	&::after {
+	&::before {
 		content: "";
 		position: absolute;
 		width: 100%;
@@ -107,7 +107,7 @@ body {
 	&:hover {
 		cursor: pointer;
 
-		&::after {
+		&::before {
 			opacity: 1;
 		}
 
@@ -144,8 +144,6 @@ body {
 .restaurants {
 	padding: $padding-container;
 	background-color: $color-grey-light;
-	overflow: hidden;
-	position: relative;
 }
 
 .restau-grid {
@@ -164,9 +162,9 @@ body {
 	width: 100%;
 	max-width: 18rem;
 	box-shadow: 0 5px 12px -5px rgba($color-black, 0.2);
+	cursor: pointer;
 
 	&:hover {
-		cursor: pointer;
 		animation: restau-preview 200ms;
 	}
 
@@ -190,10 +188,10 @@ body {
 	&__body {
 		margin: 0.75rem;
 		position: relative;
+	}
 
-		& > h3 {
-			margin-bottom: 0.25rem;
-		}
+	&__heading {
+		margin-bottom: 0.25rem;
 	}
 }
 

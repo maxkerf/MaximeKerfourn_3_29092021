@@ -12,6 +12,12 @@
 	}
 }
 
+@keyframes loading-page {
+	0% {
+		transform: scale(0);
+	}
+}
+
 @keyframes loader {
 	100% {
 		transform: rotate(1turn);
@@ -21,15 +27,6 @@
 @keyframes loader-balls {
 	100% {
 		transform: rotate(1turn);
-	}
-}
-
-@keyframes loading-page {
-	from {
-		transform: scale(0);
-	}
-	to {
-		transform: scale(1);
 	}
 }
 
