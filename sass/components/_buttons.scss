@@ -44,12 +44,11 @@
 }
 
 .btn-like {
-	cursor: pointer;
 	position: absolute;
 
 	&--preview {
-		top: 0;
-		right: 2rem;
+		top: 0.75rem;
+		right: 2.75rem;
 	}
 
 	&--menu {
@@ -57,18 +56,24 @@
 		right: 3.5rem;
 	}
 
-	&:hover {
-		& > .btn-like__content {
-			transform: scale(0);
+	&__input {
+		position: absolute;
+		opacity: 0;
 
-			&--active {
-				transform: scale(1);
-				opacity: 1;
+		&:checked {
+			& + .btn-like__content {
+				transform: scale(0);
+
+				& + .btn-like__content--active {
+					transform: scale(1);
+					opacity: 1;
+				}
 			}
 		}
 	}
 
 	&__content {
+		cursor: pointer;
 		position: absolute;
 		font-size: 1.5rem;
 		color: transparent;
