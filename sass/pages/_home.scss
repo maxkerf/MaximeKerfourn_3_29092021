@@ -18,13 +18,13 @@ body {
 	@include disc($size-loader, transparent);
 	display: flex;
 	justify-content: center;
-	animation: loader $anim-dur 2 alternate-reverse;
+	animation: loader $anim-dur-loader 2 alternate-reverse;
 
 	&__ball {
 		@include disc($size-loader-ball, $color-primary);
 		position: absolute;
 		transform-origin: 50% $size-loader/2;
-		animation: loader-balls $anim-dur 2 alternate;
+		animation: loader-balls $anim-dur-loader 2 alternate;
 
 		@for $i from 1 through $nb-balls {
 			&--#{$i} {
@@ -167,6 +167,7 @@ body {
 
 	&:hover {
 		cursor: pointer;
+		animation: restau-preview 200ms;
 	}
 
 	&__image {

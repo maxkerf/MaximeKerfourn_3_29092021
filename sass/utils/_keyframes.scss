@@ -1,3 +1,5 @@
+/* Loader */
+
 @keyframes loading-body {
 	0% {
 		height: 100vh;
@@ -28,5 +30,36 @@
 	}
 	to {
 		transform: scale(1);
+	}
+}
+
+/* Menu */
+
+@keyframes menu-choices {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes menu-choice {
+	0% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/* Restau preview */
+
+@keyframes restau-preview {
+	25% {
+		transform: rotate(-1deg);
+	}
+	75% {
+		transform: rotate(1deg);
 	}
 }
