@@ -12,6 +12,12 @@
 	background-color: $color-bg;
 }
 
+@mixin text-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 @mixin mobile-only {
 	@media screen and (max-width: map-get($breakpoints, mobile)) {
 		@content;

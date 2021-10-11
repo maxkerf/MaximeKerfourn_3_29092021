@@ -36,9 +36,12 @@
 			</div>
 			<form id="menu" class="menu">
 				<section class="menu-category">
-					<h2 class="menu-category__heading"><span>Entr</span>ées</h2>
+					<div class="menu-category__heading">
+						<h2><span>Entr</span>ées</h2>
+					</div>
 					<div class="menu-category__choices-list">
 						<div class="menu-choice">
+							<label class="menu-choice__label" for="starter-1"></label>
 							<input
 								class="menu-choice__input"
 								type="radio"
@@ -47,18 +50,17 @@
 								value="1"
 								required
 							/>
-							<label class="menu-choice__content" for="starter-1">
-								<h3 class="menu-choice__heading">Oeuf au plat</h3>
-								<p class="menu-choice__description">
-									Assaisoné à la truffe sur lit de caviar
-								</p>
-								<span class="menu-choice__price">20€</span>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Tartare de poulpe acidulé</h3>
+								<p class="menu-choice__description">Aux zestes d'orange</p>
+								<span class="menu-choice__price">25€</span>
 								<div class="menu-choice__check">
 									<i class="fas fa-check-circle"></i>
 								</div>
-							</label>
+							</div>
 						</div>
 						<div class="menu-choice">
+							<label class="menu-choice__label" for="starter-2"></label>
 							<input
 								class="menu-choice__input"
 								type="radio"
@@ -67,18 +69,19 @@
 								value="2"
 								required
 							/>
-							<label class="menu-choice__content" for="starter-2">
-								<h3 class="menu-choice__heading">Oeuf au plat</h3>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Velouté de légumes d'antan</h3>
 								<p class="menu-choice__description">
-									Assaisoné à la truffe sur lit de caviar
+									Carotte, panais, topinambour
 								</p>
-								<span class="menu-choice__price">20€</span>
+								<span class="menu-choice__price">35€</span>
 								<div class="menu-choice__check">
 									<i class="fas fa-check-circle"></i>
 								</div>
-							</label>
+							</div>
 						</div>
 						<div class="menu-choice">
+							<label class="menu-choice__label" for="starter-3"></label>
 							<input
 								class="menu-choice__input"
 								type="radio"
@@ -87,16 +90,154 @@
 								value="3"
 								required
 							/>
-							<label class="menu-choice__content" for="starter-3">
-								<h3 class="menu-choice__heading">Oeuf au plat</h3>
-								<p class="menu-choice__description">
-									Assaisoné à la truffe sur lit de caviar
-								</p>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Soupe à l'oignon</h3>
+								<p class="menu-choice__description">Revisitée</p>
 								<span class="menu-choice__price">20€</span>
 								<div class="menu-choice__check">
 									<i class="fas fa-check-circle"></i>
 								</div>
-							</label>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="menu-category">
+					<div class="menu-category__heading">
+						<h2><span>Plat</span>s</h2>
+					</div>
+					<div class="menu-category__choices-list">
+						<div class="menu-choice">
+							<label class="menu-choice__label" for="main-course-1"></label>
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="main-course-1"
+								name="main-course"
+								value="1"
+								required
+							/>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Coquilles Saint-Jacques</h3>
+								<p class="menu-choice__description">
+									Accompagnées d'une purée de panais
+								</p>
+								<span class="menu-choice__price">40€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
+						</div>
+						<div class="menu-choice">
+							<label class="menu-choice__label" for="main-course-2"></label>
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="main-course-2"
+								name="main-course"
+								value="2"
+								required
+							/>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Magret de canard</h3>
+								<p class="menu-choice__description">
+									Et parmentier de pommes de terre
+								</p>
+								<span class="menu-choice__price">35€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
+						</div>
+						<div class="menu-choice">
+							<label class="menu-choice__label" for="main-course-3"></label>
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="main-course-3"
+								name="main-course"
+								value="3"
+								required
+							/>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">
+									Pigeonneau d’Ille-et-Vilaine
+								</h3>
+								<p class="menu-choice__description">
+									Sur son lit de gnocchis aux légumes
+								</p>
+								<span class="menu-choice__price">44€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="menu-category">
+					<div class="menu-category__heading">
+						<h2><span>Dess</span>erts</h2>
+					</div>
+					<div class="menu-category__choices-list">
+						<div class="menu-choice">
+							<label class="menu-choice__label" for="dessert-1"></label>
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="dessert-1"
+								name="dessert"
+								value="1"
+								required
+							/>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">
+									Pétales de violettes glacés
+								</h3>
+								<p class="menu-choice__description">Et purée de noisettes</p>
+								<span class="menu-choice__price">18€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
+						</div>
+						<div class="menu-choice">
+							<label class="menu-choice__label" for="dessert-2"></label>
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="dessert-2"
+								name="dessert"
+								value="2"
+								required
+							/>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Fondant au chocolat</h3>
+								<p class="menu-choice__description">Revisité</p>
+								<span class="menu-choice__price">22€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
+						</div>
+						<div class="menu-choice">
+							<label class="menu-choice__label" for="dessert-3"></label>
+							<input
+								class="menu-choice__input"
+								type="radio"
+								id="dessert-3"
+								name="dessert"
+								value="3"
+								required
+							/>
+							<div class="menu-choice__content">
+								<h3 class="menu-choice__heading">Millefeuille croustillant</h3>
+								<p class="menu-choice__description">
+									Myrtilles et pâte d’amande
+								</p>
+								<span class="menu-choice__price">23€</span>
+								<div class="menu-choice__check">
+									<i class="fas fa-check-circle"></i>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
