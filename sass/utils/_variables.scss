@@ -13,6 +13,7 @@ $color-black: #000;
 /* Size */
 
 $size-step-number: 1.5rem;
+$size-preview-image: 9rem;
 
 /* Padding */
 
@@ -30,3 +31,9 @@ $anim-delay-loader: 3000ms;
 
 $anim-dur-menu: 1000ms;
 $anim-delay-menu: 1000ms;
+
+/* Responsive */
+
+$breakpoints: (
+	mobile: 500px,
+);

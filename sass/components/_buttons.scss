@@ -47,7 +47,7 @@
 	position: absolute;
 
 	&--preview {
-		top: 0.75rem;
+		top: 0.75rem + $size-preview-image;
 		right: 2.75rem;
 	}
 

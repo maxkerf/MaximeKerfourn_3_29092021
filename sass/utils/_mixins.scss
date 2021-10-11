@@ -11,3 +11,15 @@
 	border-radius: 50%;
 	background-color: $color-bg;
 }
+
+@mixin mobile-only {
+	@media screen and (max-width: map-get($breakpoints, mobile)) {
+		@content;
+	}
+}
+
+@mixin desktop-only {
+	@media screen and (min-width: map-get($breakpoints, mobile)) {
+		@content;
+	}
+}
