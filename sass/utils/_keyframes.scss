@@ -1,12 +1,4 @@
 /* Loader */
-
-@keyframes loading-body {
-	0% {
-		height: 100vh;
-		overflow-y: hidden;
-	}
-}
-
 @keyframes loader-container {
 	100% {
 		transform: scale(0);

@@ -10,14 +10,15 @@ $color-grey-darker: #353535;
 $color-white: #fff;
 $color-black: #000;
 
-/* Size */
+/* Global */
+
+$padding-container: 2rem 1rem;
+$nb-restaurants: 4;
+
+/* Home */
 
 $size-step-number: 1.5rem;
 $size-preview-image: 9rem;
-
-/* Padding */
-
-$padding-container: 2rem 1rem;
 
 /* Loader */
 
@@ -29,8 +30,9 @@ $anim-delay-loader: 3000ms;
 
 /* Menu */
 
+$nb-max-choices: 4;
 $anim-dur-menu: 1000ms;
-$anim-delay-menu: 1000ms;
+$anim-delay-menu: 500ms;
 
 /* Responsive */
 

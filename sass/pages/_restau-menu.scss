@@ -16,19 +16,31 @@
 
 	&::before {
 		content: "";
-		background: url("../../public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash-small.jpg")
-			50% 75% / cover;
+		background-position: 50% 75%;
+		background-size: cover;
 		position: absolute;
 		width: 100%;
 		height: 12.5rem;
 		top: -10rem;
 		left: 0;
 		z-index: -1;
+
+		@include desktop-only {
+			box-shadow: 0 0 10px rgba($color-black, 0.2);
+		}
+	}
+
+	@for $i from 1 through $nb-restaurants {
+		&--#{$i} {
+			&::before {
+				background-image: url("../../public/images/restaurants/restau-#{$i}.jpg");
+			}
+		}
 	}
 
 	&__name {
 		font-family: "Shrikhand", cursive;
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 	}
 }
 
@@ -48,7 +60,7 @@
 			text-transform: uppercase;
 			font-weight: 400;
 			font-size: 1rem;
-			animation: menu-category $anim-delay-menu * 1.5 ease-out;
+			animation: menu-category $anim-dur-menu ease-out;
 
 			& > span {
 				border-bottom: 3px solid $color-tertiary;
@@ -74,7 +86,7 @@
 	position: relative;
 	animation: menu-choice $anim-dur-menu $anim-delay-menu backwards ease-out;
 
-	@for $i from 1 through 3 {
+	@for $i from 1 through $nb-max-choices {
 		&:nth-of-type(#{$i}) {
 			animation-delay: $anim-delay-menu + 100ms * ($i - 1);
 		}
@@ -144,7 +156,7 @@
 
 	&__description {
 		margin-top: 0.25rem;
-		font-size: 0.875rem;
+		font-size: 0.8125rem;
 		@include text-ellipsis;
 	}
 
