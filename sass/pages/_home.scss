@@ -173,7 +173,6 @@
 .restau-grid {
 	margin-top: 1rem;
 	display: flex;
-	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1rem;
 }
@@ -182,9 +181,21 @@
 	border-radius: 1rem;
 	overflow: hidden;
 	position: relative;
-	width: 100%;
-	max-width: 18rem;
+	flex: 100%;
 	box-shadow: 0 5px 12px -5px rgba($color-black, 0.2);
+
+	@include desktop-only {
+		flex: 1;
+		min-width: 18rem;
+	}
+
+	/* The rem added correspond to the gaps and the padding  */
+	@media screen and (min-width: 3*$size-preview + 4rem) and (max-width: 4*$size-preview + 5rem) {
+		&:nth-of-type(4) {
+			flex: unset;
+			width: calc((100% - 2rem) / 3);
+		}
+	}
 
 	&:hover {
 		@include desktop-only {

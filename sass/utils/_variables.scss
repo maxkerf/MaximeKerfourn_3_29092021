@@ -19,6 +19,7 @@ $nb-restaurants: 4;
 
 $size-step-number: 1.5rem;
 $size-preview-image: 9rem;
+$size-preview: 18rem;
 
 /* Loader */
 
@@ -31,6 +32,8 @@ $anim-delay-loader: 3000ms;
 /* Menu */
 
 $nb-max-choices: 4;
+$size-choice-check: 3rem;
+$anim-dur-choice: 500ms;
 $anim-dur-menu: 1000ms;
 $anim-delay-menu: 500ms;
 
